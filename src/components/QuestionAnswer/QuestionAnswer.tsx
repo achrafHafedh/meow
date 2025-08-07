@@ -5,6 +5,7 @@ import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { addScore, setCatToCompare, setCutestCat } from "@/store/catsSlice";
 import { Cat } from "@/types";
 import { getRandomCatExcludingId } from "@/lib/array";
+import Link from "next/link";
 
 type QuestionAnswerProps = {
   question: string;
@@ -27,7 +28,7 @@ export default function QuestionAnswer({ question }: QuestionAnswerProps) {
   return (
     <div className="pt-10">
       <div className="text-lg">{question}</div>
-      <ul className="inline-grid grid-cols-2 mt-3 gap-10">
+      <ul className="grid grid-cols-1 md:grid-cols-2 mt-3 gap-6 md:gap-10">
         <li
           className={`border p-10 cursor-pointer rounded-tl-2xl rounded-br-2xl transition-transform duration-300 hover:scale-105 ${
             rounds !== 0 ? "border-indigo-500" : "border-gray-300"
@@ -35,7 +36,7 @@ export default function QuestionAnswer({ question }: QuestionAnswerProps) {
         >
           <button
             onClick={() => chooseCat(cutestCat!)}
-            className="w-[220px] h-[180px] relative overflow-hidden rounded-md "
+            className="w-[220px] h-[180px] relative overflow-hidden rounded-md"
           >
             {cutestCat?.url && (
               <Image
@@ -67,14 +68,14 @@ export default function QuestionAnswer({ question }: QuestionAnswerProps) {
       </ul>
       <div className="flex items-center justify-between bg-white rounded-tl-2xl rounded-br-2xl p-4 border border-gray-300 my-6">
         <div className="text-md font-medium">
-          Matchs joués: <span className="text-indigo-500">{rounds}</span>
+          Matchs joués: <span className="text-indigo-700">{rounds}</span>
         </div>
-        <button
-          onClick={() => ""}
+        <Link
+          href="/results"
           className="bg-indigo-500 hover:bg-indigo-700 text-white font-medium  px-4 py-2 rounded-lg transition cursor-pointer"
         >
           Voir les résultats
-        </button>
+        </Link>
       </div>
     </div>
   );

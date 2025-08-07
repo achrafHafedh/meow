@@ -14,3 +14,7 @@ export const getRandomCatExcludingId = (
   const randomIndex = Math.floor(Math.random() * filtered.length);
   return filtered[randomIndex];
 };
+
+export const sortCatsByScore = (cats: Cat[]): Cat[] =>
+  [...cats].sort((firstCat, secondCat) => secondCat.score - firstCat.score);
+

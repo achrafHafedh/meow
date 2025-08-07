@@ -18,7 +18,7 @@ export default function CatsWrapper({ cats }: Props) {
 
   useEffect(() => {
     dispatch(initStore(addScoreToCats(cats)));
-  }, []);
+  }, [cats, dispatch]);
 
   return (
     <div className="container max-w-2xl mx-auto py-16 px-4">

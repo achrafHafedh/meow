@@ -19,9 +19,6 @@ export async function GET() {
     const data = await externalRes.json();
     return NextResponse.json(data);
   } catch (error) {
-    return NextResponse.json(
-      { error: "Error network or server" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error }, { status: 500 });
   }
 }
