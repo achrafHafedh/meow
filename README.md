@@ -86,7 +86,7 @@ You can create this file with the following variables for the frontend and API e
 ```env
 NEXT_PUBLIC_URL=http://localhost:3000
 NEXT_PUBLIC_API=http://localhost:3000/api
-NEXT_EXTERNAL_PUBLIC_API=https://conseil.latelier.co/data/cats.json
+NEXT_PUBLIC_EXTERNAL_API=https://conseil.latelier.co/data/cats.json
 ```
 
 
@@ -98,4 +98,4 @@ NEXT_EXTERNAL_PUBLIC_API=https://conseil.latelier.co/data/cats.json
 
 
 This app is already deployed on Vercel and available at:  
-[https://meow-gamma.vercel.app/fr](https://meow-gamma.vercel.app)
+[https://meow-one-eta.vercel.app/](https://meow-one-eta.vercel.app/)

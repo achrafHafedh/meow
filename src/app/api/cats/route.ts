@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    const externalRes = await fetch(`${process.env.NEXT_EXTERNAL_PUBLIC_API}`, {
+    const externalRes = await fetch(`${process.env.NEXT_PUBLIC_EXTERNAL_API}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
