@@ -1,24 +1,21 @@
 import Header from "@/components/Header/Header";
 
 import SeoHead from "./Head";
+import { Providers } from "./Providers";
 
 import "./../styles/global.css";
 
 export default async function LocaleLayout({
   children,
-  params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-
   return (
-    <html lang={locale}>
+    <html lang="fr">
       <SeoHead />
       <body suppressHydrationWarning={true}>
         <Header />
-        <main>{children}</main>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

@@ -1,5 +1,5 @@
 {
-  "name": "papernest",
+  "name": "meow",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -17,9 +17,11 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
     "next": "15.3.5",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.0.1",
