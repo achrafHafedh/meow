@@ -85,7 +85,6 @@ You can create this file with the following variables for the frontend and API e
 
 ```env
 NEXT_PUBLIC_URL=http://localhost:3000
-NEXT_PUBLIC_API=http://localhost:3000/api
 NEXT_PUBLIC_EXTERNAL_API=https://conseil.latelier.co/data/cats.json
 ```
 

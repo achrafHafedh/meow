@@ -1,5 +1,5 @@
 export async function getCats() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API}/cats/`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_EXTERNAL_API}`, {
     cache: "force-cache",
   });
   if (!res.ok) {
